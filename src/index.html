@@ -15,8 +15,11 @@
         <audio><source src="assets\hover.mp3" type="audio/mpeg"></audio>
         <a href=""><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\logo.png" id="logo"></a>
         <div id="container">
-            <p><button onclick="iniciarJogo()" id="jogar">JOGAR</button></p>
-            <p><button onclick="mostrarCreditos()" id="creditos"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\creditos.png"></button></p>
+            <div id="telainicial">
+                <p><button onclick="tela1()" id="jogar"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\jogar.png"></button></p>
+                <p><button onclick="mostrarCreditos()" id="creditos"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\creditos.png"></button></p>
+                <p id="disclaimer">(Este jogo é melhor visualizado na resolução 1920 x 1080)</p>
+            </div>
             <div id="jogo" style="display: none">
                 <img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\fundo.png" id="fundo">
                 <img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\vasos.png" id="vasos" class="item" onclick="mostrarMensagem('msgVasos')">
@@ -24,28 +27,41 @@
                 <img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\caixa.png" id="caixa" class="item" onclick="mostrarMensagem('msgCaixa')">
                 <img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\lixo.png" id="lixo" class="item" onclick="mostrarMensagem('msgLixo')">
                 <img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\cacos.png" id="cacos" class="item" onclick="mostrarMensagem('msgCacos')">
+                <p><button onclick="retornar()">VOLTAR</button></p>
             </div>
-            <div id="containerCreditos" style="display: none">
-                <p><span class="titulos">O JOGO:</span></p>
-                <p>Este jogo foi desenvolvido como atividade final da disciplina de Interação Humano-Computador, ministrada pelo professor Daniel Almeida Chagas.
-                    <br>(Universidade de Fortaleza, 2024.1)
-                    <br>Ele conta com ilustrações originais criadas exclusivamente para este propósito e foi desenvolvido em HTML, CSS e JavaScript.</p>
+            <div id="tela1" style="display: none">
+                <p><span class="titulos">Olá!</span><br>Antes de começarmos, pode nos dizer seu primeiro nome?</p>
+                <form>
+                    <p><input type="text" name="nome" id="nome"></p>
+                </form>
+                <p><button onclick="tela2()"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\arrow-circle-right.svg"></button></p>
+            </div>
+            <div id="tela2" style="display: none">
+                <p>Prazer em te conhecer, <span id="nomeusuario"></span>!</p>
+                <p>Esse jogo tem o objetivo de te ensinar um pouco sobre prevenção contra o Aedes aegypti, mosquito transmissor de doenças como dengue, chikungunya e zika.</p>
+                <p>Você poderá explorar o quintal de uma casa comum, interagir com os objetos e descobrir as medidas adequadas para evitar que o mosquito se prolifere.</p>
+                <p>Então, vamos nessa? :)</p>
+                <p><button onclick="iniciarJogo()"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\arrow-circle-right.svg"></button></p>
+            </div>
+            <div id="containercreditos" style="display: none">
+                <p><span class="titulos">DESENVOLVIMENTO:</span>
+                <br>Este jogo foi elaborado como AV3 da disciplina de Interação Humano-Computador, ministrada pelo professor Daniel Almeida Chagas, no semestre 2024.1 (UNIFOR).
+                    <br>Ele conta com ilustrações exclusivas elaboradas para este propósito e foi desenvolvido em HTML, CSS e JavaScript.
+                    <br>Foram utilizados os sons <a href="https://pixabay.com/sound-effects/ui-correct-button2-103167/">UI_correct_button2</a> e <a href="https://pixabay.com/sound-effects/clickselect2-92097/">clickselect2</a> (Pixabay).</p>
                 <p><span class="titulos">EQUIPE:</span>
                 <br>Anna Correia, Lais Barbosa, Letícia Lucena e Raul Holanda</p>
                 <p><span class="titulos">EXTRAS:</span>
-                    <br>Agora que você aprendeu um pouco sobre a prevenção contra o Aedes aegypti, adskadjladsm</p>
-                    <div id="botoes">
+                    <br>Agora que você aprendeu um pouco sobre a prevenção contra o Aedes aegypti, confira estes links!</p>
+                    <div id="links">
                         <a href="https://www.unifor.br" target="_blank">Universidade de Fortaleza</a> ✶ <a href="https://brasil.un.org/pt-br/sdgs" target="_blank">Objetivos do Desenvolvimento Sustentável</a> ✶ <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/dengue" target="_blank">Dengue (Ministério da Saúde)</a>
                     </div>
-                <p><a href=""><button>VOLTAR</button></a></p>
+                    <p><button onclick="retornar()"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\arrow-circle-left.svg"></button></p>
                 <a href="https://youtu.be/SG5QwGaZKBI" target="_blank"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\aedes.png" id="aedes" onclick="aedes()"></a>
             </div>
-            <div id="teste" style="display: none">
+            <div id="texto" style="display: none">
                 <p id="msg"></p>
                 <button onclick="ocultarMensagem()" id="voltar">VOLTAR</button>
             </div>
         </div>
     </body>
 </html>
-
-div pra inserir o nome, chama a função e abre dizendo oi [nome da pessoa] quer aprender mais sobre a dengue? explore essa casa para entender mais
