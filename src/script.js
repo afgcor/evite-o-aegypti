@@ -57,7 +57,7 @@ function mostrarMensagem(texto) {
             mensagem = "Cacos no muro também podem servir de criadouro para os mosquitos! Coloque areia ou concreto para preenchê-los.";
             break;
         case 'msgCaixa':
-            mensagem = "Garrafas vazias e destampadas devem ser guardadas de cabeça para baixo!";
+            mensagem = "Garrafas vazias e destampadas devem ser guardadas de cabeça para baixo! O mesmo vale para latas e outros recipientes abertos.";
             break;
     }
     const divTexto = document.getElementById("texto");
@@ -82,6 +82,8 @@ function ocultarMensagem() {
 function mostrarCreditos() {
     somPlay();
     document.getElementById("telainicial").style.display = "none";
+    document.getElementById("jogo").style.display = "none";
+    document.getElementById("final").style.display = "none";
     document.getElementById("containercreditos").style.display = "block";
     document.getElementById("containercreditos").style.animation = "fadein 0.3s";
 }
@@ -90,12 +92,64 @@ function retornar() {
     somPlay();
     document.getElementById("jogo").style.display = "none";
     document.getElementById("containercreditos").style.display = "none";
+    document.getElementById("final").style.display = "none";
     document.getElementById("telainicial").style.display = "block";
     document.getElementById("telainicial").style.animation = "fadein 0.3s";
     location.reload();
 }
 
-function aedes() {
-    document.getElementById("aedes").src = "D:\\Users\\Anna\\Desktop\\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\\Unifor\\S2\\Interação Humano-Computador\\jogo\\assets\\rip.png";
-    document.getElementById("aedes").style.width = "110px";
+function mosquito() {
+    document.getElementById("mosquito").src = "D:\\Users\\Anna\\Desktop\\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\\Unifor\\S2\\Interação Humano-Computador\\jogo\\assets\\rip.png";
+    document.getElementById("mosquito").style.width = "110px";
+}
+
+/* document.addEventListener('DOMContentLoaded', () => {
+    const aedes = document.getElementById("aedes");
+
+    document.getElementById("aedes").addEventListener('click', () => {
+        if (aedes.id === )
+    })
+}) */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const aedes = document.getElementById("mosquito");
+
+    document.getElementById("mosquito").addEventListener('click', () => {
+        if (aedes.id === "mosquito") {
+            aedes.id = "mosquitoclicado";
+        }
+    });
+})
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const itens = document.querySelectorAll('.item');
+    let clicados = 0;
+
+    itens.forEach((item) => {
+        item.addEventListener('click', () => {
+            // Se o item ainda não foi clicado (adiciona uma classe 'clicked' para rastreamento)
+            if (!item.classList.contains('clicado')) {
+                item.classList.add('clicado');
+                clicados++;
+                
+                // Verifica se todos os itens foram clicados
+                if (clicados === itens.length) {
+                    setTimeout(() => {exibirFinal();}, 5000);
+                }
+            }
+        });
+    });
+});
+
+function exibirFinal() {
+    somWin();
+    document.getElementById("final").style.display = "block";
+    document.getElementById("final").style.animation = "fadein 0.5s";
+    document.getElementById("texto").style.display = "none";
+}
+
+
+function somWin() {
+    var win = new Audio('../assets/win.mp3');
+    win.play();
 }

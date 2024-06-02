@@ -38,7 +38,7 @@
             </div>
             <div id="tela2" style="display: none">
                 <p>Prazer em te conhecer, <span id="nomeusuario"></span>!</p>
-                <p>Esse jogo tem o objetivo de te ensinar um pouco sobre prevenção contra o Aedes aegypti, mosquito transmissor de doenças como dengue, chikungunya e zika.</p>
+                <p>Esse jogo tem o objetivo de te ensinar um pouco sobre prevenção contra o <span class="titulos">Aedes aegypti</span>, mosquito transmissor de doenças como <span class="titulos">dengue, chikungunya e zika</span>.</p>
                 <p>Você poderá explorar o quintal de uma casa comum, interagir com os objetos e descobrir as medidas adequadas para evitar que o mosquito se prolifere.</p>
                 <p>Então, vamos nessa? :)</p>
                 <p><button onclick="iniciarJogo()"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\arrow-circle-right.svg"></button></p>
@@ -47,7 +47,7 @@
                 <p><span class="titulos">DESENVOLVIMENTO:</span>
                 <br>Este jogo foi elaborado como AV3 da disciplina de Interação Humano-Computador, ministrada pelo professor Daniel Almeida Chagas, no semestre 2024.1 (UNIFOR).
                     <br>Ele conta com ilustrações exclusivas elaboradas para este propósito e foi desenvolvido em HTML, CSS e JavaScript.
-                    <br>Foram utilizados os sons <a href="https://pixabay.com/sound-effects/ui-correct-button2-103167/">UI_correct_button2</a> e <a href="https://pixabay.com/sound-effects/clickselect2-92097/">clickselect2</a> (Pixabay).</p>
+                    <br>Foram utilizados os sons <a href="https://pixabay.com/sound-effects/ui-correct-button2-103167/">UI_correct_button2</a>, <a href="https://pixabay.com/sound-effects/clickselect2-92097/">clickselect2</a> e <a href="https://pixabay.com/sound-effects/marimba-win-f-3-209692/">Marimba Win F 3</a> (Pixabay).</p>
                 <p><span class="titulos">EQUIPE:</span>
                 <br>Anna Correia, Lais Barbosa, Letícia Lucena e Raul Holanda</p>
                 <p><span class="titulos">EXTRAS:</span>
@@ -56,11 +56,17 @@
                         <a href="https://www.unifor.br" target="_blank">Universidade de Fortaleza</a> ✶ <a href="https://brasil.un.org/pt-br/sdgs" target="_blank">Objetivos do Desenvolvimento Sustentável</a> ✶ <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/dengue" target="_blank">Dengue (Ministério da Saúde)</a>
                     </div>
                     <p><button onclick="retornar()"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\arrow-circle-left.svg"></button></p>
-                <a href="https://youtu.be/SG5QwGaZKBI" target="_blank"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\aedes.png" id="aedes" onclick="aedes()"></a>
+                <a href="https://youtu.be/SG5QwGaZKBI" target="_blank"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\aedes.png" id="mosquito" onclick="mosquito()"></a>
             </div>
             <div id="texto" style="display: none">
                 <p id="msg"></p>
                 <button onclick="ocultarMensagem()" id="voltar">VOLTAR</button>
+            </div>
+            <div id="final" style="display: none">
+                <p><span class="titulos">Parabéns!</span>
+                <br>Você encontrou todos os possíveis focos de reprodução do Aedes aegypti nesta casa.
+                <br>Lembre-se destas dicas no dia-a-dia e ajude no combate à dengue!</p>
+                <button onclick="mostrarCreditos()"><img src="D:\Users\Anna\Desktop\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\Unifor\S2\Interação Humano-Computador\jogo\assets\arrow-circle-right.svg"></button>
             </div>
         </div>
     </body>
