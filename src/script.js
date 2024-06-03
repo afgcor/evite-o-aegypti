@@ -99,17 +99,9 @@ function retornar() {
 }
 
 function mosquito() {
-    document.getElementById("mosquito").src = "D:\\Users\\Anna\\Desktop\\ANÁLISE E DESENVOLVIMENTO DE SISTEMAS\\Unifor\\S2\\Interação Humano-Computador\\jogo\\assets\\rip.png";
+    document.getElementById("mosquito").src = "../assets/rip.png";
     document.getElementById("mosquito").style.width = "110px";
 }
-
-/* document.addEventListener('DOMContentLoaded', () => {
-    const aedes = document.getElementById("aedes");
-
-    document.getElementById("aedes").addEventListener('click', () => {
-        if (aedes.id === )
-    })
-}) */
 
 document.addEventListener('DOMContentLoaded', () => {
     const aedes = document.getElementById("mosquito");
