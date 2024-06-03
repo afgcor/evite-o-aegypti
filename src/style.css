@@ -198,6 +198,7 @@ a:hover {
 #mosquito {
     width: 240px;
     animation: sobe 3s infinite;
+    cursor: pointer;
 }
 
 @keyframes sobe {
@@ -340,4 +341,9 @@ a:hover {
 #final button img {
     width: 50px;
     cursor: pointer;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap");
 }

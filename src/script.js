@@ -99,6 +99,7 @@ function retornar() {
 }
 
 function mosquito() {
+    somPlay();
     document.getElementById("mosquito").src = "../assets/rip.png";
     document.getElementById("mosquito").style.width = "110px";
 }
