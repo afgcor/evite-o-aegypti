@@ -11,20 +11,20 @@
         <title>:: EVITE O AEGYPTI ::</title>
     </head>
     <body>
-        <a href=""><img src="../assets/logo.png" id="logo"></a>
+        <a href=""><img src="assets/logo.png" id="logo"></a>
         <div id="container">
             <div id="telainicial">
-                <p><button onclick="tela1()" id="jogar"><img src="../assets/jogar.png"></button></p>
-                <p><button onclick="mostrarCreditos()" id="creditos"><img src="../assets/creditos.png"></button></p>
+                <p><button onclick="tela1()" id="jogar"><img src="assets/jogar.png"></button></p>
+                <p><button onclick="mostrarCreditos()" id="creditos"><img src="assets/creditos.png"></button></p>
                 <p id="disclaimer">(Este jogo é melhor visualizado na resolução 1920 x 1080)</p>
             </div>
             <div id="jogo" style="display: none">
-                <img src="../assets/fundo.png" id="fundo">
-                <img src="../assets/vasos.png" id="vasos" class="item" onclick="mostrarMensagem('msgVasos')">
-                <img src="../assets/pneus.png" id="pneus" class="item" onclick="mostrarMensagem('msgPneus')">
-                <img src="../assets/caixa.png" id="caixa" class="item" onclick="mostrarMensagem('msgCaixa')">
-                <img src="../assets/lixo.png" id="lixo" class="item" onclick="mostrarMensagem('msgLixo')">
-                <img src="../assets/cacos.png" id="cacos" class="item" onclick="mostrarMensagem('msgCacos')">
+                <img src="assets/fundo.png" id="fundo">
+                <img src="assets/vasos.png" id="vasos" class="item" onclick="mostrarMensagem('msgVasos')">
+                <img src="assets/pneus.png" id="pneus" class="item" onclick="mostrarMensagem('msgPneus')">
+                <img src="assets/caixa.png" id="caixa" class="item" onclick="mostrarMensagem('msgCaixa')">
+                <img src="assets/lixo.png" id="lixo" class="item" onclick="mostrarMensagem('msgLixo')">
+                <img src="assets/cacos.png" id="cacos" class="item" onclick="mostrarMensagem('msgCacos')">
                 <p><button onclick="retornar()">VOLTAR</button></p>
             </div>
             <div id="tela1" style="display: none">
@@ -32,14 +32,14 @@
                 <form>
                     <p><input type="text" name="nome" id="nome"></p>
                 </form>
-                <p><button onclick="tela2()"><img src="../assets/arrow-circle-right.svg"></button></p>
+                <p><button onclick="tela2()"><img src="assets/arrow-circle-right.svg"></button></p>
             </div>
             <div id="tela2" style="display: none">
                 <p>Prazer em te conhecer, <span id="nomeusuario"></span>!</p>
                 <p>Esse jogo tem o objetivo de te ensinar um pouco sobre prevenção contra o <span class="titulos">Aedes aegypti</span>, mosquito transmissor de doenças como <span class="titulos">dengue, chikungunya e zika</span>.</p>
                 <p>Você poderá explorar o quintal de uma casa comum, interagir com os objetos e descobrir as medidas adequadas para evitar que o mosquito se prolifere.</p>
                 <p>Então, vamos nessa? :)</p>
-                <p><button onclick="iniciarJogo()"><img src="../assets/arrow-circle-right.svg"></button></p>
+                <p><button onclick="iniciarJogo()"><img src="assets/arrow-circle-right.svg"></button></p>
             </div>
             <div id="containercreditos" style="display: none">
                 <p><span class="titulos">DESENVOLVIMENTO:</span>
@@ -53,8 +53,8 @@
                     <div id="links">
                         <a href="https://www.unifor.br" target="_blank">Universidade de Fortaleza</a> ✶ <a href="https://brasil.un.org/pt-br/sdgs" target="_blank">Objetivos do Desenvolvimento Sustentável</a> ✶ <a href="https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/d/dengue" target="_blank">Dengue (Ministério da Saúde)</a>
                     </div>
-                    <p><button onclick="retornar()"><img src="../assets/arrow-circle-left.svg"></button></p>
-                <a href="https://youtu.be/SG5QwGaZKBI" target="_blank"><img src="../assets/aedes.png" id="mosquito" onclick="mosquito()"></a>
+                    <p><button onclick="retornar()"><img src="assets/arrow-circle-left.svg"></button></p>
+                <a href="https://youtu.be/SG5QwGaZKBI" target="_blank"><img src="assets/aedes.png" id="mosquito" onclick="mosquito()"></a>
             </div>
             <div id="texto" style="display: none">
                 <p id="msg"></p>
@@ -64,7 +64,7 @@
                 <p><span class="titulos">Parabéns!</span>
                 <br>Você encontrou todos os possíveis focos de reprodução do Aedes aegypti nesta casa.
                 <br>Lembre-se destas dicas no dia-a-dia e ajude no combate à dengue!</p>
-                <button onclick="mostrarCreditos()"><img src="../assets/arrow-circle-right.svg"></button>
+                <button onclick="mostrarCreditos()"><img src="assets/arrow-circle-right.svg"></button>
             </div>
         </div>
     </body>

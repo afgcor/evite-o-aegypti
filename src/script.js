@@ -32,12 +32,12 @@ function pushNome(nome) {
 }
 
 function somPlay() {
-    var play = new Audio('../assets/play.mp3');
+    var play = new Audio("assets/play.mp3");
     play.play();
 }
 
 function somClique() {
-    var clique = new Audio('../assets/clique.mp3');
+    var clique = new Audio("assets/clique.mp3");
     clique.play();
 }
 
@@ -100,7 +100,7 @@ function retornar() {
 
 function mosquito() {
     somPlay();
-    document.getElementById("mosquito").src = "../assets/rip.png";
+    document.getElementById("mosquito").src = "assets/rip.png";
     document.getElementById("mosquito").style.width = "110px";
 }
 
@@ -143,6 +143,6 @@ function exibirFinal() {
 
 
 function somWin() {
-    var win = new Audio('../assets/win.mp3');
+    var win = new Audio("assets/win.mp3");
     win.play();
 }
